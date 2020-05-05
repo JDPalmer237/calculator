@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Script testing
+p {
+  font-size: 20px;
+  color: blue;
+  background-color: crimson;
+}
+*/
+
+.cal {
+  display: grid;
+  background-color: rgb(24, 24, 24);
+  grid-template: 100px 20px repeat(5, 100px) / repeat(4, 100px);
+  width: 440px;
+  height: 670px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 60px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.cal div {
+  background-color: rgb(54, 54, 54);
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 80px;
+  margin: 6px;
+  border-radius: 50px;
+}
+
+#buttonZero {
+  grid-column: 1 / span 2;
+}
+
+#screen {
+  font-size: 50px;
+  border-radius: 15px;
+  text-align: right;
+  padding-right: 25px;
+  background-color: rgb(24, 24, 24);
+  grid-column: 1 / span 4;
+}
+
+#screenTwo {
+  font-size: 15px;
+  border-radius: 0px;
+  text-align: right;
+  padding-right: 35px;
+  line-height:17px;
+  margin: 1px;
+  background-color: rgb(24, 24, 24);
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 1;
+}
+
+#buttonClear, #buttonClearAll, #buttonPercentage {
+  background-color: rgb(202, 202, 202);
+  color: black;
+}
+
+#buttonDivide, #buttonTimes, #buttonMinus, #buttonPlus, #buttonEquals {
+  background-color: rgb(216, 147, 43);
+}
