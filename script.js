@@ -1,6 +1,5 @@
 //Calculator
 
-
 //Number Buttons
 
 let buttonOne = document.getElementById('buttonOne');
@@ -120,10 +119,13 @@ buttonEquals.onmousedown = () => {
   buttonEquals.style.opacity = '0.6';
   buttonEquals.style.color = 'black';
   let answer = eval(sum.join(''));
-  screen.innerHTML = answer;
   if (screen.innerHTML == 'undefined') {
     screen.innerHTML = 0;
   }
+  if (answer.toString().length > 6) {
+    answer = answer.toFixed(6);
+  }
+  screen.innerHTML = answer;
 }
 
 buttonEquals.onmouseup = () => {
@@ -144,7 +146,7 @@ let screen = document.getElementById('screen');
 
 //can click equals after operator
 
-//infinite decimal answer runs off screen
+//answer runs off screen when number gets too high
 
 //second screen blows out if sum is too long
 
